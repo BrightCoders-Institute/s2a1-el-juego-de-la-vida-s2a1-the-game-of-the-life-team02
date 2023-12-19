@@ -1,4 +1,4 @@
-class cell
+class Cell
   attr_accessor :status
   ##Estado para saber si esta viva o muerta
   ## * == vivo  . == muerto

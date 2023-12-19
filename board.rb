@@ -1,4 +1,4 @@
-class board
+class Board
   attr_accessor :rows, :columns
 
   def initialize(rows, columns)
