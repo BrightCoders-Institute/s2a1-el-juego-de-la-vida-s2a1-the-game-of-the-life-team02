@@ -1,9 +1,8 @@
 # main.rb
-require_relative 'Board'
-require_relative 'Cell'
-
-# persona1 = Persona.new("Juan", 25)
-# persona2 = Persona.new("María", 30)
-
-# persona1.saludar
-# persona2.saludar
+require_relative 'board'
+require_relative 'cell'
+# Solicitar entrada al usuario
+puts "Ingrese columnas:"
+columns= gets.chomp.to_i
+puts "ingrese filas"
+rows= gets.chomp.to_i

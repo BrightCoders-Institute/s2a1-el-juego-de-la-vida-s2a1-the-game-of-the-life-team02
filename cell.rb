@@ -3,9 +3,7 @@ class Cell
   ##Estado para saber si esta viva o muerta
   ## * == vivo  . == muerto
 
-  def initialize(status)
-    @status = status
-  end
+
 
   def initialize
     @status = rand(2)
