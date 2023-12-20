@@ -12,10 +12,11 @@ class Board
 
   # Generar tablero
   def generate_board
-    @grid.each do |i|
-      @rows.each do |j|
-        print Cell.status
+    @rows.times do |i|
+      @columns.times do |j|
+        print @grid[i][j].mostrar
       end
+      puts # Agregar un salto de línea después de cada fila
     end
   end
 
