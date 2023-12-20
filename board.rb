@@ -1,19 +1,21 @@
-class Board
-  
+# frozen_string_literal: true
 
+# Clase Board para crear el tablero del juego de la vida
+class Board
   def initialize(rows, columns)
     @rows = rows
     @columns = columns
-    @grid = []
+    @grid = Array.new(@rows) { Array.new(@columns) }
   end
-    def grid   
-      @grid 
-    end
+
+  # Generar tablero
   def generate_board
-    for i in 0..@rows
-      for j in 0..@columns
-        puts matriz[i][j]
+    (0...@rows).each do |i|
+      (0...@columns).each do |j|
+        puts grid[i][j]
       end
     end
   end
+
+  attr_reader :grid
 end
