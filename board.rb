@@ -35,15 +35,13 @@ class Board
       @columns.times do |j|
         @counts = count_surrounding_cells(i, j)
         @lives = @counts[:live]
-  
         # Condición: Si hay menos de dos células vivas en la vecindad, cambia el status a "."
         if @lives < 2
-          @grid[i][j].status = 0  # 0 representa el estado de célula muerta
+          @grid[i][j].status = 0 # 0 representa el estado de célula muerta
         end
       end
     end
   end
-  
 
   def test
     @rows.times do |i|
