@@ -30,16 +30,28 @@ class Board
     end
   end
 
-  def next_generation;
+  def next_generation
+    @rows.times do |i|
+      @columns.times do |j|
+        @counts = count_surrounding_cells(i, j)
+        @lives = @counts[:live]
   
-
+        # Condición: Si hay menos de dos células vivas en la vecindad, cambia el status a "."
+        if @lives < 2
+          @grid[i][j].status = 0  # 0 representa el estado de célula muerta
+        end
+      end
+    end
   end
+  
 
   def test
     @rows.times do |i|
       @columns.times do |j|
-        counts = count_surrounding_cells(i, j)
-        puts "En la posición [#{i}][#{j}]: Live: #{counts[:live]}, Dead: #{counts[:dead]}"
+        @counts = count_surrounding_cells(i, j)
+        @lives = @counts[:live] # Corrección aquí
+        puts "En la posición [#{i}][#{j}]: Live: #{@counts[:live]}, Dead: #{@counts[:dead]}"
+        puts @counts[:live]
       end
     end
   end

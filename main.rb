@@ -14,5 +14,6 @@ puts 'Ingrese filas'
 board = Board.new(@rows, @columns)
 
 board.generate_board
-
-board.test
+puts 'Tablero después de aplicar reglas:'
+board.next_generation
+board.generate_board
