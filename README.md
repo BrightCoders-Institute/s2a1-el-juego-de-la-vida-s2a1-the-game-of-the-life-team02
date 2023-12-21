@@ -15,3 +15,8 @@ Things you may want to cover:
 - How to Use the Project.
 - Credits
 - Badges
+
+
+Co-authored-by: Ramon Diaz <jramondiaz96@gmail.com>
+Co-authored-by: Yhoselin Sanchez <yossi2075.ys@gmail.com>
+Co-authored-by: Fernando Arellano <farellano.0709@gmail.com>
