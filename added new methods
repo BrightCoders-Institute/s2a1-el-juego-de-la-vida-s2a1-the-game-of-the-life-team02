@@ -1,0 +1,16 @@
+
+# Por favor ingresa el mensaje del commit para tus cambios. Las
+#  líneas que comiencen con '#' serán ignoradas, y un mensaje
+#  vacío aborta el commit.
+#
+# En la rama main
+# Tu rama está actualizada con 'origin/main'.
+#
+# Cambios a ser confirmados:
+#	modificados:     board.rb
+#
+
+Se agrego el metodo contar vecinos y contar vivos.
+
+Co-authored-by: Ramon Diaz <jramondiaz96@gmail.com>
+Co-authored-by: Yhoselin Sanchez <yossi2075.ys@gmail.com>
