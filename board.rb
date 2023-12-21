@@ -24,9 +24,23 @@ class Board
     @rows.times do |i|
       @columns.times do |j|
         count = count_surrounding_cells(i, j)
-        print count.to_s
+        print count
       end
       puts # Agregar un salto de linea después de cada fila
+    end
+  end
+
+  def next_generation;
+  
+
+  end
+
+  def test
+    @rows.times do |i|
+      @columns.times do |j|
+        counts = count_surrounding_cells(i, j)
+        puts "En la posición [#{i}][#{j}]: Live: #{counts[:live]}, Dead: #{counts[:dead]}"
+      end
     end
   end
 
@@ -38,6 +52,9 @@ class Board
     # Bucle para recorrer las posiciones circundantes
     (-1..1).each do |row_offset|
       (-1..1).each do |col_offset|
+        # Ignorar la posición actual [i][j]
+        next if row_offset.zero? && col_offset.zero?
+
         # Calcular las coordenadas de la posicion circundante
         row = i + row_offset
         col = j + col_offset

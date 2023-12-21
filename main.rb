@@ -14,3 +14,5 @@ puts 'Ingrese filas'
 board = Board.new(@rows, @columns)
 
 board.generate_board
+
+board.test
