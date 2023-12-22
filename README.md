@@ -6,7 +6,7 @@ Este proyecto es una implementación del 'Juego de la Vida' de Conway, un autóm
 ## Cómo Instalar y Ejecutar el Proyecto
 1. Clona el repositorio:
    ```bash
-   git clone [URL del repositorio]
+   git clone [https://github.com/BrightCoders-Institute/s2a1-el-juego-de-la-vida-s2a1-the-game-of-the-life-team02]
    ```
 2. Instala las dependencias:
    ```bash
