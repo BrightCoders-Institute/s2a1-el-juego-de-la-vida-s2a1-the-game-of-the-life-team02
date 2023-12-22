@@ -56,8 +56,9 @@ class Board
       cell.status = DEAD # Regla 2: Muere por sobre-población
     end
   end
-
-  def test
+  
+  #Metodo para testear cuantos vecinos vivos y muertos hay alrededor en una matriz 3x3
+  def test 
     @rows.times do |i|
       @columns.times do |j|
         @counts = count_surrounding_cells(i, j)
