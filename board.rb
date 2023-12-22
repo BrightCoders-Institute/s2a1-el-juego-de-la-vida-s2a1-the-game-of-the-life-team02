@@ -4,6 +4,9 @@ require_relative 'cell'
 
 # Clase Board para crear el tablero del juego de la vida
 class Board
+  DEAD = 0
+  ALIVE = 1
+
   def initialize(rows, columns)
     @rows = rows
     @columns = columns
@@ -33,13 +36,24 @@ class Board
   def next_generation
     @rows.times do |i|
       @columns.times do |j|
+        cell = @grid[i][j]
         @counts = count_surrounding_cells(i, j)
         @lives = @counts[:live]
-        # Condición: Si hay menos de dos células vivas en la vecindad, cambia el status a "."
-        if @lives < 2
-          @grid[i][j].status = 0 # 0 representa el estado de célula muerta
-        end
+        rules(cell)
       end
+    end
+  end
+
+  def rules(cell)
+    case @lives
+    when 0..1
+      cell.status = DEAD # Regla 1: Muere por falta de población
+    when 2
+      # Regla 3: Sobrevive a la siguiente generación
+    when 3
+      cell.status = ALIVE # Regla 4: Se convierte en una célula viva
+    else
+      cell.status = DEAD # Regla 2: Muere por sobre-población
     end
   end
 
