@@ -4,12 +4,20 @@
 require_relative 'board'
 require_relative 'cell'
 
-# Solicitar entrada al usuario
-puts 'Ingrese columnas:'
-columns = gets.chomp.to_i
+def solicitar_entero(prompt)
+  loop do
+    print "#{prompt}\n"
+    input = gets.chomp
 
-puts 'Ingrese filas:'
-rows = gets.chomp.to_i
+    return Integer(input) if /^\d+$/.match?(input)
+
+    puts 'Por favor, ingresa un número entero válido.'
+  end
+end
+
+# Solicitar entrada al usuario
+columns = solicitar_entero('Ingrese columnas:')
+rows = solicitar_entero('Ingrese filas:')
 
 board = Board.new(rows, columns)
 
